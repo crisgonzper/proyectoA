@@ -1,0 +1,18 @@
+#home {
+    width: 2000px;
+}
+#uno {
+    height: 125px;
+    width: 2000px;
+    background-color: rgb(231, 245, 237);
+}
+#dos {
+    height: 125px;
+    width: 2000px;
+    background-color: rgb(241, 242, 250);
+}
+#tres {
+    height: 125px;
+    width: 2000px;
+    background-color: rgb(226, 227, 248);
+}
