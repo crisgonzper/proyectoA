@@ -13,10 +13,34 @@
                 <hr class="my-4">
                 <p>Ya estamos preparados para nuevos pasos...</p>
             </div>
+            <app-hijo-pr [propiedadHijo]="personaData"></app-hijo-pr>
         </section>
-        <section id="uno">Contenido de la sección 1</section>
-        <section id="dos">Contenido de la sección 2</section>
-        <section id="tres">Contenido de la sección 3</section>
+        <h3>Sección 1:</h3>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="usr">Nombre:</label>
+                    <input type="text" [(ngModel)]="personaData.nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Apellidos:</label>
+                    <input type="text" [(ngModel)]="personaData.apellidos" class="form-control">
+                </div>
+                
+                <button type="button"  (click)="eventoBotonAngular()" class="btn btn-primary btn-blok">Evento Angular</button> 
+            </div>
+            <div class="col-6" >
+                <div class="form-group">
+                    <label for="usr">Edad:</label>
+                    <input type="text" [(ngModel)]="personaData.edad" class="form-control">
+                </div>
+                <br/><br/>
+                <app-hijo-pr [propiedadHijo]="personaData"></app-hijo-pr>
+            </div>
+        </div>
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 
     <div class="row">
