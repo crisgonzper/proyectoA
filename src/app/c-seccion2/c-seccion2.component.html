@@ -1,5 +1,26 @@
 <p>Sección 2: </p> 
-<label *ngIf="nombrePersona"> Protagonizada por {{nombrePersona}}</label>
-<br>
-<hr>
-<br>
+<p>Sección 2:</p> <label *ngIf="nombrePersona">Protagonizada por {{nombrePersona}} </label> <br/> <br/>
+
+<form [formGroup]="formcomentarios" class="form-inline">
+    <div class="row">
+        <div class="col-2">Comentario:</div>
+        <div class="col-4">  
+            <input type="text" class="form-control" placeholder="Usuario" formControlName="usuario" required>
+            <div class="input-group-append" *ngIf="f['usuario'].errors">
+                    <p *ngIf="f['usuario'].errors['required']" class="error-validate red"> *Obligatorio</p>
+                    <p *ngIf="f['usuario'].errors['maxlength']" class="error-validate red"> *Debe contener máximo 50 caracteres</p>
+            </div>
+        </div>
+        <div class="col-4">
+            <input type="text" class="form-control" placeholder="Comentario" formControlName="comentarios" >
+            <div class="input-group-append" *ngIf="f['comentarios'].errors">
+                <p *ngIf="f['comentarios'].errors['required']" class="error-validate "> *Obligatorio</p>
+                <p *ngIf="f['comentarios'].errors['minlength']" class="error-validate "> *Debe contener mínimo 10 caracteres</p>
+            </div>
+        </div>
+        <div class="col-2">
+            <button *ngIf="f['usuario'].errors || f['comentarios'].errors" type="button" class="btn btn-primary" disabled>Enviar</button>
+            <button *ngIf="!f['usuario'].errors && !f['comentarios'].errors" type="button" class="btn btn-primary" (click)="mostrarComentario();">Enviar</button>
+        </div>
+    </div> 
+</form>
