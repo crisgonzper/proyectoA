@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, ActivatedRoute} from '@angular/router'; 
+import { ProductosService } from '../servicio/productos.service';
+import { Product } from '../models/Product';
 
 @Component({
   selector: 'app-c-seccion3',
@@ -7,9 +9,15 @@ import { Routes, ActivatedRoute} from '@angular/router';
   styleUrls: ['./c-seccion3.component.css']
 })
 export class CSeccion3Component implements OnInit {
+
   ciudad:string='';
   poblacion:string='';
-  constructor(private route:ActivatedRoute) { }
+  productos: Product[] =[];
+
+  constructor(private route:ActivatedRoute,  productosService: ProductosService) { 
+    this.productos=productosService.listadoProductos();
+
+  }
 
   ngOnInit(): void {
 
