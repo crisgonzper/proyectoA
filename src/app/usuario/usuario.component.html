@@ -1,0 +1,39 @@
+<h4>Probando HTTP desde Angular</h4>>
+<div class="containes">
+
+<div class="row">
+    <div class="col-8">
+        <table class="table table-striped">
+            <thead>
+                    <th>ID</th> <th>Nombre</th> <th>Username</th> <th>Email</th> <th>*</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usu of usuarios"> 
+                    <td>{{usu.id}}</td> <td>{{usu.name}}  {{usu.employee_name}}</td> <td>{{usu.username}}</td>
+                    <td>{{usu.email}}</td> 
+                    <td> 
+                        <button (click)="eliminarUsuario(usu.id)" class="btn btn-primary">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4">
+        <h5>Formulario:</h5>
+        <div class="form-group">
+            <label for="controlNombre">Nombre</label>
+            <input type="text" [(ngModel)]="usuarioAagregar.name" class="form-control" placeholder="nombre" />
+        </div>
+        <div class="form-group">
+            <label for="controlUsername">Username</label>
+            <input type="text" [(ngModel)]="usuarioAagregar.username" class="form-control" placeholder="username" />
+        </div>
+        <div class="form-group">
+            <label for="controlEmail">Email</label>
+            <input type="text" [(ngModel)]="usuarioAagregar.email" class="form-control" placeholder="email" />
+        </div>
+        <button class="btn btn-primary" (click)="nuevoUsuario()">Añadir</button>
+    </div>
+
+</div>
+</div>

@@ -164,7 +164,7 @@ export class ProductosService {
       "Description": "Used up the Diskette fabric today to make 2 of these crops.",
       "Ratings": null
     }
-  ]
+  ];
 
   constructor() { }
 
