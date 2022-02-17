@@ -1,0 +1,8 @@
+{
+     "header":{
+         "home" :"Home",
+         "section": "section",
+         "menu" : "Menu",
+         "user": "User"
+     }
+}

@@ -30,25 +30,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#home" [translate]="'header.home'"></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#uno">Sección 1</a>
+                  <a class="nav-link" href="#uno">{{'header.section'|translate}}1</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/seccion2']">Sección 2</a>
+                  <a class="nav-link" [routerLink]="['/seccion2']">{{'header.section'|translate}} 2</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/seccion3']">Sección 3</a>
+                  <a class="nav-link" [routerLink]="['/seccion3']">{{'header.section'|translate}} 3</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/seccion2', 'Monica']">Menu 4(n)</a>
+                  <a class="nav-link" [routerLink]="['/seccion2', 'Monica']">{{'header.menu'|translate}} 4(n)</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/seccion3', 'Murcia', 'Nonleras']">Menu 5(cyp)</a>
+                  <a class="nav-link" [routerLink]="['/seccion3', 'Murcia', 'Nonleras']">{{'header.menu'|translate}} 5(cyp)</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" [routerLink]="['/Usuario']">Usuario</a>
+                  <a class="nav-link" [routerLink]="['/Usuario']">{{'header.user'|translate}}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="changeLangugeToSpanish();">ESP</a> 
+                  
+                  <a class="nav-link" (click)="changeLangugeToEnglish();">ING</a>                    
                 </li>
               </ul>
             </div>
