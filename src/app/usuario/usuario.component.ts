@@ -48,4 +48,8 @@ nuevoUsuario () {
                                       });
 }
 
+listarUsuariosSimple(){
+    this.usuarios=this.usService.listadoDeUsuarios();
+  }
+
 }

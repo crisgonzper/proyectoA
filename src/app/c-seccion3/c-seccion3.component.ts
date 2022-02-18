@@ -34,4 +34,14 @@ export class CSeccion3Component implements OnInit {
 
   }
 
+  concatenaIdProductos (listProducts:Product[]):string {
+    let cadena:string="";
+
+    listProducts.forEach ( (pr:Product) => {
+      cadena += pr.Id + ", ";
+    });
+    return cadena;
+  }
+
+
 }
